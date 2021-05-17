@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body,p,a {
+    font-family: 'Work Sans', sans-serif;
+    color: #FBE58C;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.15),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+body{
+    display: contents;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+    color: #F7CA18;
+    font-weight: bold;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.15),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+#index{
+
+}
+
+
+nav{
+    display: flex;
+height: 100vh;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    margin: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    position: relative;
+flex-direction: column;
+    height: fit-content;
+    background-color:#333;
+    padding: 0;
+margin: 0;
+    border-radius: 2px;
+}
+
+nav li{
+padding: 0 20px;
+list-style: none;
+    height: 60px;
+}
+
+.active {
+    background-color: #F7CA18;
+    animation: 3s;
+    transition: 0.3s;
+}
+.active:after {
+    border-bottom: unset !important;
+    transition: 0.3s;
+}
+
+nav li:hover {
+    background-color: #FBE58C;
+    animation: 3s;
+    transition: 0.3s;
+}
+nav li:hover:after {
+    border-bottom: unset !important;
+    transition: 0.3s;
+}
+
+nav li:after {
+    border-bottom: 2px  solid #F7CA18;
+    content: '';
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+nav li:last-child:after {
+    border-bottom: unset !important;
+}
+
+
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+   width: 100%;
+    height: 100%;
+
+}
+
+#hero{
+height: 100vh;
+    background: url("../css/test.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+#hero div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+#hero p{
+    margin-left: 50px;
+    font-size: 3rem;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#hero h1{
+    font-size: 4rem;
+    margin-bottom: -70px;
+    margin-right: 50px;
+    font-weight: bold;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#Contact{
+
+}
+
+#About{
+    padding: 5vh 0;
+background-color: #eeeeee;
+}
+
+#About > div{
+    text-align: left;
+    padding: 0 0 0 12%;
+}
+
+
+#About h2{
+    color: #F7CA18;
+    margin: 0px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+#About h2:after {
+    border-bottom: 3px  solid #FFFFFF;
+    content: '';
+    display: flex;
+    padding-top: 10px;
+    position: absolute;
+    margin: auto;
+    width: 10%;
+}
+#About p{
+    text-align: left;
+ color: black;
+    font-size: 1.1rem;
+}
+#Resume{
+    padding: 5vh 0;
+    background-color: #eeeeee;
+}
+
+#Resume > div{
+    text-align: left;
+    padding: 0 0 0 12%;
+}
+
+.row{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.col{
+}
