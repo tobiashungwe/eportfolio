@@ -1,18 +1,16 @@
 <template>
   <div id="hero">
-<div>
-  <h1>Jordi De Pau</h1>
-  <p>
-    I'm a
-    <span> Student</span>
-  </p>
-</div>
+    <div>
+      <h1>Jordi De Pau</h1>
+      <p>
+        I'm a
+        <span> Student</span>
+      </p>
+    </div>
+    <div class="filler">
+    </div>
   </div>
 </template>
-
-<div >
-
-</div>
 <script>
 
 
@@ -22,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-#hero{
+#hero {
 
 }
 
