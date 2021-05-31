@@ -3,22 +3,24 @@
     <div>
       <div>
         <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.x</p></div>
+        <div>x
+        <p>This is a brief overview of my Resume. Download the pdf for a detailed overview</p>
+        <button>Resume PDF</button>
+        </div>
+      </div>
       <div class="row">
         <div class="col">
           <div class="resume">
             <h3>Summary</h3>
             <div class="resume-item">
-              <h4>Alex Smith</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
-                developing user-centered digital/print marketing material from initial concept to final, polished
+              <h4>Jordi De Pau</h4>
+              <p><em>Driven Full Stack Designer Student with 1+ years of experience designing and
+                developing user-centered web and application material from initial concept to final, polished
                 deliverable.</em></p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Ostende 8400, Belgium</li>
+                <li>+32476582456</li>
+                <li>mail@jordidepau.be</li>
               </ul>
             </div>
           </div>
@@ -26,19 +28,10 @@
 
             <h3>Education</h3>
             <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
-                ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
-                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
-                dila</p>
+              <h4>Applied Informatics</h4>
+              <h5>2019 - Present</h5>
+              <p><em>University Colleges Leuven-Limburg,  Belgium</em></p>
+              <p>Applied informatics with focus on Development, business and networking. Project driven classes with an eye for fast changing future of technology</p>
             </div>
           </div>
 

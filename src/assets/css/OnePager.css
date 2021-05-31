@@ -1,31 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
-body,p,a {
+body, p, a,label {
     font-family: 'Work Sans', sans-serif;
-    color: #FBE58C;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.15),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
+    color: #FDDA7E;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
-body{
+
+body {
     display: contents;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
-    color: #F7CA18;
+    color: #FFB900;
     font-weight: bold;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.15),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
-}
-#index{
-
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
+#index {
 
-nav{
+}
+
+#app{
+    max-width: 100vw;
+}
+
+
+nav {
     display: flex;
     position: fixed;
     z-index: 5;
@@ -35,45 +41,50 @@ nav{
     align-items: center;
 }
 
-nav ul{
+nav ul {
     display: flex;
     position: relative;
-flex-direction: column;
+    flex-direction: column;
     height: fit-content;
-    background-color:#35363A;
+    background-color: #35363A;
     padding: 0;
-margin: 0;
+    margin: 0;
     border-radius: 2px;
 }
 
-nav li{
-padding: 0 20px;
-list-style: none;
+nav li {
+    padding: 0 20px;
+    list-style: none;
     height: 60px;
+    border: #35363A solid 2px;
 }
 
 .active {
-    background-color: #F7CA18;
+    background-color: #FFB900;
     animation: 3s;
     transition: 0.3s;
+    border: #FFB900 solid 2px;
 }
+
 .active:after {
     border-bottom: unset !important;
     transition: 0.3s;
 }
 
 nav li:hover {
-    background-color: #FBE58C;
+    background-color: #FBFBFB;
     animation: 3s;
     transition: 0.3s;
+    color: black;
 }
+
 nav li:hover:after {
     border-bottom: unset !important;
     transition: 0.3s;
 }
 
 nav li:after {
-    border-bottom: 2px  solid #F7CA18;
+    border-bottom: 2px solid #FFB900;
     content: '';
     display: block;
     margin: auto;
@@ -84,9 +95,16 @@ nav li:last-child:after {
     border-bottom: unset !important;
 }
 
+nav li:hover a {
+    color: #FFB900;
+    text-decoration: none;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
 
 
-nav a{
+nav a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,12 +112,26 @@ nav a{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
-   width: 100%;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+    width: 100%;
     height: 100%;
 
+}
+
+div:first-child > div > div {
+    padding: 0;
+}
+
+#app > div > div:first-child {
+    text-align: left;
+    padding: 0 0 0 150px;
+}
+
+#app > div > div:first-child > div {
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -111,14 +143,16 @@ nav a{
     background: rgb(50, 50, 50);
     background: linear-gradient(180deg, rgba(50, 50, 50, 0.8) 0%, rgba(251, 251, 251, 1) 50%);
 }
-#hero{
-height: 105vh;
+
+#hero {
+    height: 105vh;
     background: url("../css/test.jpg");
     background-size: cover;
+    background-position: center;
     position: relative;
 }
 
-#hero div{
+#hero div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,107 +161,284 @@ height: 105vh;
     flex-direction: column;
 }
 
-#hero p{
+#hero p {
     margin-left: 50px;
     font-size: 3rem;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
-#hero h1{
+#hero h1 {
     font-size: 4rem;
     margin-bottom: -30px;
     margin-right: 50px;
     font-weight: bold;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
-#Contact{
+#Contact {
 
 }
 
-#About{
-    padding: 5vh 0;
-    min-height: 105vh;
+#About .filler {
+    position: relative;
+    height: 300px;
+
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background: rgb(251, 251, 251);
+    background: linear-gradient(180deg, rgba(251, 251, 251, 1) 50%, #FFB900 70%);
+}
+
+
+#About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #FBFBFB;
 }
 
-#About > div{
+#About ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#About .row .col .row {
+    padding: 20px 0;
+}
+
+#About li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#About p, li {
+    color: #424B54;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+#About li strong {
+    font-weight: bolder;
+    margin: 0 5px;
+    color: black;
+
+}
+
+#About li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+#About > div:first-child {
     text-align: left;
     padding: 0 0 0 12%;
+    margin: auto;
 }
 
 
-#About h2{
-    color: #F7CA18;
+#About h2 {
+    color: #FFB900;
     margin: 0px;
     padding-bottom: 10px;
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 #About h2:after {
-    border-bottom: 3px  solid #FFFFFF;
+    border-bottom: 3px solid #FDDA7E;
     content: '';
     display: flex;
     padding-top: 10px;
     position: absolute;
     margin: auto;
-    width: 10%;
-}
-#About p, #Resume p{
-    text-align: left;
-    font-size: 1.1rem;
-    color: white;
 }
 
-#Resume .filler {
+#About div h2:after {
+    width: 12%;
+}
+
+#About div .row h2:after {
+    width: 50%;
+}
+
+#About p, #Resume p {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+#About svg{
+    color: #FFB900;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    filter:
+            drop-shadow(0px 4px 3px #FFB90080)
+            drop-shadow( 0px 8px 13px rgb(0 0 0 / 30%))
+            drop-shadow(0px 18px 23px rgb(0 0 0 / 10%))
+}
+
+
+#Skills {
+    display: flex;
+    background-color: #FFB900;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:end;
+}
+
+#Skills:first-child {
+    margin: auto;
+}
+
+#Skills h2 {
+    color: #424B54;
+    margin: 0px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0px 4px 3px rgb(0 0 0 / 30%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
+}
+
+#Skills h2:after {
+    border-bottom: 3px solid #35363A;
+    content: '';
+    display: flex;
+    padding-top: 10px;
     position: absolute;
+    margin: auto;
+    width: 20%;
+
+}
+
+#Skills li {
+    display: flex;
+    justify-content: space-between;
+    color: #35363A;
+    align-items: baseline;
+    text-justify: auto;
+}
+
+#Skills svg {
+    margin: 0 2px;
+    width: 24px;
+    height: 24px;
+    color: #35363A;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#Skills section:first-of-type span, #Skills section:first-of-type p {
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 2px;
+}
+
+#Skills li p, #Skills li span {
+    display: flex;
+    justify-content: space-between;
+    color: #424B54;
+    text-shadow: 0px 4px 3px rgb(0 0 0 / 30%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
+
+}
+#Skills  section:first-of-type li span{
+    filter:
+
+            drop-shadow(0px 4px 3px rgb(0 0 0 / 30%))
+            drop-shadow( 0px 8px 13px rgb(255 255 255 / 30%))
+            drop-shadow(0px 18px 23px rgb(0 0 0 / 10%))
+}
+
+
+#Skills h3 {
+    padding: 10px 0;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #35363A;
+    text-shadow: 0px 4px 3px rgb(0 0 0 / 30%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
+}
+
+#Skills .filler {
+    position: relative;
+    height: 300px;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background: rgb(251, 251, 251);
+    background: linear-gradient(180deg, #FFB900 50%,#424B54 70%);
+}
+
+
+#Resume .filler {
+    position: unset;
     bottom: 0;
     width: 100%;
     height: 5vh;
     background: rgb(50, 50, 50);
-    background: linear-gradient(180deg, rgba(50, 50, 50, 0.8) 0%, rgba(251, 251, 251, 1) 50%);
+    background: linear-gradient(180deg, #424B54 50%,#FFB900 70%);
 }
 
-#Resume{
-    min-height: 105vh;
-    padding: 5vh 0;
-    background: rgb(251,251,251);
-    background: linear-gradient(180deg, rgba(251,251,251,1) 0%, rgba(253,218,126,1) 7%);
+
+#Resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:end;
+    background-color: #424B54;
 }
 
-#Resume h3{
+#Resume h3 {
     padding: 1vh 0;
     color: white;
 }
 
-#Resume > div{
+#Resume > div {
     text-align: left;
     padding: 0 0 0 12%;
 }
 
-#Resume li{
+#Resume li {
     color: white;
     text-decoration: none;
     list-style: none;
 }
 
 
+#Resume h2:after{
+    border-bottom: 3px solid #FBFBFB;
+    content: '';
+    display: flex;
+    padding-top: 10px;
+    position: absolute;
+    margin: auto;
+    width: 20%;
+}
 
-#Resume .col{
+#Resume .col {
     max-width: 50%;
 }
 
-#Portfolio{
-    height: 100vh;
-    padding: 5vh 0 5vh 12%;
-    background: rgb(253,218,126);
-    background: linear-gradient(180deg, rgba(253,218,126,1) 0%, rgba(255,185,0,1) 7%);
+
+
+
+
+#Portfolio {
+    background: #FFB900;
 }
-#Portfolio .row{
+
+#Portfolio .row {
     display: grid;
     grid-template-columns: auto auto auto;
     row-gap: 20px;
@@ -235,11 +446,12 @@ height: 105vh;
     padding-bottom: 5vh;
 }
 
-#Portfolio .col{
+#Portfolio .col {
     display: flex;
     position: relative;
 }
-#Portfolio .col div{
+
+#Portfolio .col div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -251,7 +463,7 @@ height: 105vh;
 }
 
 
-#Portfolio .col div div{
+#Portfolio .col div div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -260,71 +472,127 @@ height: 105vh;
     height: min-content;
     position: static;
 }
-#Portfolio .col div p{
+
+#Portfolio .col div p {
     margin: 12px 24px;
     font-size: 1rem;
     font-weight: bolder;
 }
 
 
-#Portfolio img{
+#Portfolio img {
     width: 100%;
     height: auto;
     max-width: 25vw;
 }
 
 
-#Portfolio .col:hover div{
+#Portfolio .col:hover div {
     z-index: 2;
     display: flex !important;
     padding-right: 7px;
 }
 
+#Portfolio h2{
+    color: #424B54;
+    font-weight: bolder;
+    margin: 0px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 10px;
 
-#contact{
+}
+
+#Portfolio h2:after {
+    border-bottom: 3px solid #35363A;
+    content: '';
+    display: flex;
+    padding-top: 10px;
+    position: absolute;
+    margin: auto;
+    width: 20%;
+}
+
+
+#contact {
     background-color: #fff;
     background-size: cover;
-    background-position-y: -357px;
-    background-position-x: center;
     color: black;
 }
 
-#contact{
+#contact {
     display: flex;
     flex-direction: column;
 }
 
 
-
-#contact div{
+#contact div div {
     display: flex;
     flex-direction: row-reverse;
-    width: 80vw;
-    margin-left: 15vw;
-    gap: 4vw;
-    justify-content: end;
     text-align: right;
 }
-#contact img{
+
+#contact img {
     height: auto;
     width: 100%;
     padding-bottom: 5vh;
 }
 
-#contact section{
+#contact section {
     width: 100%;
     height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+}
+#contact div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#contact input {
+    border: 2px solid #FFB900;
+    padding: 5px 7.5px;
+    border-radius: 3px;
+}
+#contact section .col{
+    width:100%;
+    width: -moz-available;
+}
+#contact form{
+    width: 100%;
 }
 
+::placeholder{
+    color: #FFB900;
+}
+#contact placeholder{
+    border-color: #FFB900;
+}
+#contact textarea{
+    border: 2px solid #FFB900;
+    padding: 5px 7.5px;
+    background: #FBFBFB;
+    border-radius: 3px;
+    width: 100%;
+    min-width: 35vw;
+}
+#contact label{
+    color: #424B54;
+    font-weight: bolder;
+}
+#contact iframe{
+    max-width: 80vw;
+    width: 100%;
+    min-width: 35vw;
+}
+#contact input{
+    background: #FBFBFB;
+}
 
-.resume-item{
+.resume-item {
 
 }
 
-.resume-item::before {
+#Resume .resume-item::before {
     content: "";
     position: absolute;
     width: 16px;
@@ -336,7 +604,7 @@ height: 105vh;
     border: 2px solid #F7CA18;
 }
 
-.resume-item {
+#Resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
     border-left: 2px solid #FBE58C;
@@ -344,7 +612,7 @@ height: 105vh;
     height: autofill;
 }
 
-.row{
+.row {
     display: flex;
     align-items: stretch;
     justify-content: space-around;
@@ -352,7 +620,23 @@ height: 105vh;
     margin: 0;
 }
 
-.col{
+.col {
+}
+form span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+form span:nth-child(4){
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+form input[type=submit]{
+    width: 100%;
 }
 
 @media only screen and (max-width: 680px) {
@@ -370,59 +654,77 @@ height: 105vh;
         color: white;
         box-shadow: 2px 2px 2px #35363A80
     }
-    #navbar svg{
+
+    #navbar svg {
         color: white;
         padding: 2px 0;
     }
-    #navbar ul{
+
+    #navbar ul {
         display: flex;
         align-items: center;
         width: 100%;
     }
-    nav button img{
+
+    nav button img {
         width: 15px;
         padding: 50px;
 
     }
-    nav button{
+
+    nav button {
         display: block;
         background-color: #ffffff01;
-        border:none;
+        border: none;
         border-left: 3px solid #F7CA18;;
         height: auto;
     }
-    nav li{
+
+    nav li {
         width: 100vw;
     }
-    nav a{
+
+    nav a {
         width: 100;
     }
-    nav div{
+
+    nav div {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    nav  div h1{
+
+    nav div h1 {
         margin-left: 20px;
     }
 
-    nav ul{
+    nav ul {
         display: none;
     }
 
-    textarea{
+    textarea {
         max-width: 100vw;
     }
 
-    iframe{
+    iframe {
         max-width: 100vw;
+    }
+
+    #About .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #app > div > div:first-child {
+        text-align: left;
+        padding: 2px;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 680px) {
-    nav{
+    nav {
         display: flex;
         height: 100vh;
         position: fixed;
@@ -432,23 +734,67 @@ height: 105vh;
         justify-content: center;
         align-items: center;
     }
-    nav div{
+
+    nav div {
         display: none;
     }
 
-    nav ul{
+    nav ul {
         display: flex;
+    }
+
+    #About .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #About .row .col .row {
+        flex-direction: row;
+    }
+
+    #app > div > div:first-child {
+        text-align: left;
+        padding: 0px 0 0 160px;
+
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    #About .row {
+        flex-direction: row;
+    }
+
+    #About .row .col .row {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #app > div > div:first-child {
+        padding: 0 0 0 160px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    #app > div > div:first-child {
+        text-align: left;
+        max-width: 1200px;
+        padding: 0 0 0 160px;
+        margin: 0 auto;
+    }
+
+    #Skills div {
+        width: 1208px;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    #app > div > div:first-child {
+        padding: 0;
+    }
 }

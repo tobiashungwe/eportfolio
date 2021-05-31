@@ -10,10 +10,10 @@
     </div>
     <ul id="navList" class="">
       <li class="active">
-        <a class="" href="#">Home</a>
+        <a class="" href="#Hero">Home</a>
       </li>
       <li class="">
-        <a class="" href="#">About</a>
+        <a class="" href="#About">About</a>
       </li>
       <li class="">
         <a class="" href="#">Resume</a>
